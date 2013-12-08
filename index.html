@@ -68,18 +68,39 @@
         </table>
         
         <form role="form">
-            <p>
-                <label for="tip">Add Tip</label>
-                <input type="hidden" name="tip" id="tip" value="3.60" />
-                <input type="hidden" name="subtotal" id="subtotal" value="24" />
-            </p>
-            
-            <p>
-                <label for="total">Total</label>
-                <input type="hidden" name="total" id="total" value="27.60">
-            </p>
-            
-            <p><input class="btn btn-default" type="submit" value="Pay with PayPal" /></p>
+            <input type="hidden" name="subtotal" id="subtotal" value="24" />
+            <table class="table">
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><input class="btn btn-default" type="submit" value="Pay with PayPal" /></td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td><label for="tip">Add Tip</label></td>
+                        <td>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="options" id="option1">15&#37;
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="options" id="option2">18&#37;
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="options" id="option3">20&#37;
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="options" id="option4">other
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="total">Total</label></td>
+                        <td><input type="hidden" name="total" id="total" value="27.60"></td>
+                    </tr>
+                </tbody>
+            </table>
         </form>
         
         <script src="js/vendor/zepto.min.js"></script>
